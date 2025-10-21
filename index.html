@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<!--header-->
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PCHands">
+  <meta name="keywords" content="PCHands">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PCHands</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H4HPH84C5T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-H4HPH84C5T');
+  </script>
+  
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!--basic-info-->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!--tittle-->
+          <h1 class="title is-1 publication-title">
+            <span class="dpchands">PCHands</span>: <br>PCA-based Hand Pose Synergy Representation on <br>Manipulators with <i>N</i>-DoF
+          </h1>
+
+          <!--authors-->
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=jePmCqAAAAAJ">En Yen Puang</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://fedeceola.github.io/">Federico Ceola</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=8EKDQjcAAAAJ">Giulia Pasquale</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://lornat75.github.io/">Lorenzo Natale</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>HSP, Istituto Italiano di Tecnologia,</span>
+            <span class="author-block"><sup>2</sup>DIBRIS, University of Genoa</span>
+          </div>
+
+          <div class="column has-text-centered is-size-4">
+            <p style="font-family:Cursive">IEEE-RAS International Conference on Humanoid Robots</p>
+            <p style="font-family:Cursive">Humanoids 2025, Seoul</p>
+          </div>
+
+          <!--links-->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2508.07945"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=1rJksShwlbU"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-youtube-play"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/hsp-iit/PCHands"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/HSP-IIT/PCHands"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-database"></i>
+                  </span>
+                  <span>Demonstration</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--teaser-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline width="100%">
+        <source src="./static/vid/teaser.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!--Abstract-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We consider the problem of learning a common representation for dexterous manipulation across manipulators of different morphologies. To this end, we propose PCHands, a novel approach for extracting hand postural synergies from a large set of manipulators. We define a simplified and unified description format based on anchor positions for manipulators ranging from 2-finger grippers to 5-finger anthropomorphic hands. This enables learning a variable-length latent representation of the manipulator configuration and the alignment of the end-effector frame of all manipulators. We show that it is possible to extract principal components from this latent representation that is universal across manipulators of different structures and degrees of freedom. To evaluate PCHands, we use this compact representation to encode observation and action spaces of control policies for dexterous manipulation tasks learned with Reinforcement Learning (RL). In terms of learning efficiency and consistency, the proposed representation outperforms a baseline that learns the same tasks in joint space. We additionally show that PCHands performs robustly in RL from demonstration, when demonstrations are provided from a different manipulator. We further support our results with real-world experiments that involve a 2-finger gripper and a 4-finger anthropomorphic hand.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--anchors-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Anchor Description Format</h2>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column interpolation-video-column">
+            <div id="interpolation-anc-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-anc-slider"
+                   step="1" min="1" max="50" value="1" type="range">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Architecture-->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">Model Architecture</h3>
+        <div class="content has-text-centered">
+          <video id="" autoplay muted loop playsinline>
+            <source src="./static/vid/model.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">End-Effector Pose Refinement</h3>
+        <div class="content has-text-centered">
+          <div class="content has-text-justified">
+            <p>
+              For all manipulators, we use a single-step Iterative-Closest-Point (ICP) to align anchors of target (tgt) to reference (ref) manipulators'.
+            </p>
+          </div>
+          <div class="content">
+            <img src="./static/images/icp.jpg"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--1pc-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Anchor Synergies</h2>
+        <div class="content has-text-justified">
+          <p>
+            The most significant principal component corresponds to the dimension that is
+            universal in representing simple openings.
+          </p>
+        </div>
+
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column interpolation-video-column">
+            <div id="interpolation-1pc-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info is-hcentered is-centered is-vcentered"
+                   id="interpolation-1pc-slider"
+                   step="1" min="1" max="50" value="1" type="range">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--RL-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h3 class="title is-3">Manipulation Tasks with RL</h3>
+    <div class="content has-text-justified">
+      <p>
+        We consider 5 dexterous manipulation tasks in our experiments:
+      </p>
+    </div>
+    <div class="content has-text-centered">
+      <video id="" autoplay muted loop playsinline>
+        <source src="./static/vid/rl_tasks.mp4" type="video/mp4">
+      </video>
+    </div>
+
+
+    <div class="content has-text-justified">
+      <p>
+        The collection of demonstrations involves retargeting human hand poses to robotic embodiments during teleoperation. We then use the task demonstrations to train manipulation tasks with RL on multiple target manipulators.
+      </p>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-centered">
+        <div class="column">
+          <div class="content">
+            <h5 style="text-align: center;"> Human Hand </h5>
+            <img src="./static/images/teleop_hand.jpg"/>
+          </div>
+        </div>
+      </div>
+      <div class="column is-centered">
+        <div class="column">
+          <div class="content">
+            <h5 style="text-align: center;"> MANO Hand </h5>
+            <img src="./static/images/teleop_mano.jpg"/>
+          </div>
+        </div>
+      </div>
+      <div class="column is-centered">
+        <div class="column">
+          <div class="content">
+            <h5 style="text-align: center;"> Customized Hand </h5>
+            <img src="./static/images/teleop_custom.jpg"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-centered">
+      </div>
+      <div class="column is-centered">
+        <div class="column">
+          <div class="content">
+            <h5> </h5>
+            <img src="./static/images/rl.jpg"/>
+          </div>
+        </div>
+      </div>
+      <div class="column is-centered">
+        <div class="column">
+          <div class="content">
+            <video autoplay muted loop playsinline height="100%">
+              <source src="./static/vid/rl_customized.mp4" type="video/mp4">
+            </video>
+            <h5 style="text-align: center;"> Demonstrations </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video autoplay muted loop playsinline height="100%">
+            <source src="./static/vid/rl_allegro.mp4" type="video/mp4">
+          </video>
+          <h5 style="text-align: center;"> Allegro </h5>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video autoplay muted loop playsinline height="100%">
+            <source src="./static/vid/rl_schunk.mp4" type="video/mp4">
+          </video>
+          <h5 style="text-align: center;"> Schunk </h5>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video autoplay muted loop playsinline height="100%">
+            <source src="./static/vid/rl_shadow.mp4" type="video/mp4">
+          </video>
+          <h5 style="text-align: center;"> Shadow </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--real-rollout-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h3 class="title is-3">Real-World Roll-Out</h3>
+    <div class="content has-text-justified">
+      <p>
+        Zero-shot Sim-to-Real Policy transfer on <i>Robotiq-2f85</i> and <i>Leap-hand</i> manipulator for 3 objects in 1x speed.
+      </p>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video controls muted height="100%">
+            <source src="./static/vid/real_mustard_robotiq.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video controls muted height="100%">
+            <source src="./static/vid/real_mustard_leap.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video controls muted height="100%">
+            <source src="./static/vid/real_meat_robotiq.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video controls muted height="100%">
+            <source src="./static/vid/real_meat_leap.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video controls muted height="100%">
+            <source src="./static/vid/real_soup_robotiq.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video controls muted height="100%">
+            <source src="./static/vid/real_soup_leap.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--full-video-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Full Video</h2>
+        <div class="publication-video">
+          <video id="" controls muted playsinline>
+            <source src="./static/vid/full_video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--footer-->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source code</a>
+            of <a href="https://nerfies.github.io/">Nerfies</a>, we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
