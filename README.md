@@ -235,14 +235,13 @@ This code adapts multiple sources in different sections, see:
 ## :bookmark_tabs: Citing this paper
 
 ```bibtex
-@misc{
-title={PCHands: PCA-based Hand Pose Synergy Representation on Manipulators with N-DoF}, 
-author={En Yen Puang and Federico Ceola and Giulia Pasquale and Lorenzo Natale},
-year={2025},
-eprint={2508.07945},
-archivePrefix={arXiv},
-primaryClass={cs.RO},
-url={https://arxiv.org/abs/2508.07945}, 
+@inproceedings{puang2025pchands,
+  author={Puang, En Yen and Ceola, Federico and Pasquale, Giulia and Natale, Lorenzo},
+  booktitle={2025 IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids)}, 
+  title={PCHands: PCA-Based Hand Pose Synergy Representation on Manipulators with N-DoF}, 
+  year={2025},
+  pages={475-482},
+  doi={10.1109/Humanoids65713.2025.11203193}
 }
 ```
 
