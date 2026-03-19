@@ -16,7 +16,7 @@
   <a href="https://hsp-iit.github.io/PCHands/"><b>Page</b></a> | 
   <a href="https://huggingface.co/datasets/HSP-IIT/PCHands"><b>Dataset</b></a>
   <br>
-  <video autoplay loop muted height="400" width="400" src="https://github.com/user-attachments/assets/53ebbece-246d-4359-aed9-92e007885296"></video>
+  <video autoplay loop muted height="400" width="400" src="https://github.com/user-attachments/assets/7b9ed4d4-bd1c-4d02-9a55-1fa32ad25969"></video>
 
 </div>
 
